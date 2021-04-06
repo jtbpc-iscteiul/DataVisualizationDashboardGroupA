@@ -6,5 +6,4 @@ pandas
 numpy
 gunicorn
 plotly.express
-plotly.graph_objects
 itertools
