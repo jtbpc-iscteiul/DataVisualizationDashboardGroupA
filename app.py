@@ -9,7 +9,17 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import itertools
 import collections
-import base64
+#import base64
+
+gunicorn
+plotly
+dash
+requests
+dash_renderer
+dash-html-components
+dash-core-components
+pandas
+numpy
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -176,19 +186,19 @@ checklist_medals_teams = dcc.RadioItems(
     },
 )
 
-test_png = 'OGimage.png'
-test_base64 = base64.b64encode(open(test_png, 'rb').read()).decode('ascii')
+#test_png = 'OGimage.png'
+#test_base64 = base64.b64encode(open(test_png, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
     html.Br(),
     html.Div([
         html.Div([
-            html.Img(src='data:image/png;base64,{}'.format(test_base64),
-                     style={
-                         'width': '185px',
-                         'height': '80px',
-                         'margin-top': '5px'
-                     }),
+          #  html.Img(src='data:image/png;base64,{}'.format(test_base64),
+          #           style={
+           #              'width': '185px',
+            #             'height': '80px',
+             #            'margin-top': '5px'
+              #       }),
             html.H1('Olympic Games',
                     style={
                         'color': 'black',
