@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
@@ -13,7 +12,7 @@ import plotly.express as px
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-df = pd.read_csv('result.sv')
+df = pd.read_csv('result.csv')
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
