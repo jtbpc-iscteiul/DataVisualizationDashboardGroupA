@@ -175,8 +175,8 @@ checklist_medals_teams = dcc.RadioItems(
     },
 )
 
-#test_png = 'OGimage.png'
-#test_base64 = base64.b64encode(open(test_png, 'rb').read()).decode('ascii')
+test_png = 'OGimage.png'
+test_base64 = base64.b64encode(open(test_png, 'rb').read()).decode('ascii')
 
 app.layout = html.Div([
     html.Br(),
