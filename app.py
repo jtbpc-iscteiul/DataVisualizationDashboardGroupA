@@ -49,7 +49,7 @@ year_slider_world = dcc.Slider(
     min=df['Year'].min(),
     max=df['Year'].max(),
     marks={str(i): '{}'.format(str(i))
-           for i in (1896, 2017)},
+          for i in range(1896, 2017, 4)},
     value=1964,
     step=1,
 )
@@ -254,11 +254,19 @@ app.layout = html.Div([
                              },
                              className='box'),
                     html.Br(),
-                    html.Br(),
-                    html.H1('WORLD DATA'),
+                   html.Div([
+                    html.H2(
+                        "World Data", style={'fontSize': 27})
+                    ],
+                 style={
+                     'justify-content': 'center'
+                 },
+                 className='row'),
+
                        html.Br(),
                     html.Div([
                                 year_slider_world,
+                                 html.Div(id='slider-output-world1', style={'margin-left':'2%'})
                             ]),
                                html.Br(),
                     html.Div(
@@ -428,6 +436,12 @@ app.layout = html.Div([
         ],
         style=tabs_styles)
 ])
+
+@app.callback(
+ dash.dependencies.Output('slider-output-world1', 'children'),
+ [dash.dependencies.Input('year_slider_world', 'value')])
+def update_output(value):
+    return 'Year Selected: {}'.format(value)
 
 @app.callback(Output(component_id='world graph', component_property='figure'),
               Input(component_id='medal_drop_world',
@@ -675,7 +689,7 @@ def plots1(year):
     for w in sorted_keys:
         sorted_dict[w] = dic[w]
 
- #   sorted_dict = dict(itertools.islice(sorted_dict.items(), 10))
+    sorted_dict = dict(itertools.islice(sorted_dict.items(), 10))
 
     trace_1 = go.Scatter(x=list(sorted_dict.values()),
                          y=list(sorted_dict.keys()),
@@ -835,7 +849,6 @@ def plots1(year):
               [dash.dependencies.Input('year_slider_teams', 'value')])
 def update_output(value):
     return 'Year Selected: {}'.format(value)
-
 
 #=====================================================================================================================
 
