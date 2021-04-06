@@ -8,7 +8,7 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 #import itertools
 #import collections
-#import base64
+import base64
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -182,12 +182,12 @@ app.layout = html.Div([
     html.Br(),
     html.Div([
         html.Div([
-          #  html.Img(src='data:image/png;base64,{}'.format(test_base64),
-          #           style={
-           #              'width': '185px',
-            #             'height': '80px',
-             #            'margin-top': '5px'
-              #       }),
+            html.Img(src='data:image/png;base64,{}'.format(test_base64),
+                     style={
+                         'width': '185px',
+                         'height': '80px',
+                         'margin-top': '5px'
+                     }),
             html.H1('Olympic Games',
                     style={
                         'color': 'black',
