@@ -948,6 +948,7 @@ def plots(country, sport, year):
 
     return fig1, fig2, fig3
 
+server = app.server
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True,host = '127.0.0.1')
