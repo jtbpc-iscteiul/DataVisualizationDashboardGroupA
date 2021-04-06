@@ -7,23 +7,13 @@ import plotly.graph_objects as go
 import numpy as np
 from dash.dependencies import Input, Output
 import plotly.express as px
-import itertools
-import collections
+#import itertools
+#import collections
 #import base64
-
-gunicorn
-plotly
-dash
-requests
-dash_renderer
-dash-html-components
-dash-core-components
-pandas
-numpy
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-df = pd.read_csv('result.csv')
+df = pd.read_csv('result.sv')
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -686,7 +676,7 @@ def plots1(year):
     for w in sorted_keys:
         sorted_dict[w] = dic[w]
 
-    sorted_dict = dict(itertools.islice(sorted_dict.items(), 10))
+ #   sorted_dict = dict(itertools.islice(sorted_dict.items(), 10))
 
     trace_1 = go.Scatter(x=list(sorted_dict.values()),
                          y=list(sorted_dict.keys()),
