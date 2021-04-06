@@ -191,7 +191,7 @@ app.layout = html.Div([
             html.H1('Olympic Games',
                     style={
                         'color': 'black',
-                        'fontSize': 44,
+                        'fontSize': 50,
                         'margin-top': '20px',
                         'margin-left': '5px',
                         'textAlign': 'center',
@@ -892,7 +892,7 @@ def plots(country, sport, year):
                       "Records": "Participations Nr.",
                       "Event": "Events"
                   },
-                  title="Number of Participations for each Event")
+                  title="Number of Participations per Event")
 
     fig1.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
     fig1.update_traces(marker_color='#00b153')
@@ -917,7 +917,7 @@ def plots(country, sport, year):
                             fill_color='lavender',
                             align='left'))
     ])
-    fig2.update_layout(title="Top 10 Athletes with the most Medals won")
+    fig2.update_layout(title="Top 10 Athletes with more Medals")
 
     ###############################Third Gender Ratio######################
     #number_df = dff.groupby(['Sex','Year'])['ID'].count().reset_index(name='Records')
