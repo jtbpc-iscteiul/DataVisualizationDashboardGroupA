@@ -7,7 +7,7 @@ import numpy as np
 from dash.dependencies import Input, Output
 import plotly.express as px
 import itertools
-#import collections
+import collections
 import base64
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
